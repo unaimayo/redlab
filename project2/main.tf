@@ -55,7 +55,7 @@ resource "vsphere_virtual_machine" "virtual_machine" {
   customize {
     linux_options {
       domain    = "redsys.lab"
-      host_name = "${virtual_machine_name}"
+      host_name = "${var.virtual_machine_name}"
     }
 
     network_interface {
