@@ -69,8 +69,8 @@ resource "vsphere_virtual_machine" "virtual_machine" {
       }
 
       ipv4_gateway    = "10.129.254.1"
-      dns_suffix_list = "redsys.lab"
-      dns_server_list = "10.129.254.6"
+      dns_suffix_list = ["redsys.lab"]
+      dns_server_list = ["10.129.254.6"]
     }
   }
   disk {
