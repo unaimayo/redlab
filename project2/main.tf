@@ -51,6 +51,23 @@ resource "vsphere_virtual_machine" "virtual_machine" {
   memory        = "${var.virtual_machine_memory}"
   guest_id = "${data.vsphere_virtual_machine.virtual_machine_template.guest_id}"
   resource_pool_id = "${data.vsphere_compute_cluster.virtual_machine_compute_cluster.resource_pool_id}"
+  
+  customize {
+    linux_options {
+      domain    = "redsys.lab"
+      host_name = "${virtual_machine_name}"
+    }
+
+    network_interface {
+      ipv4_address = "${var.vm_ipv4_address}"
+      ipv4_netmask = "24"
+    }
+
+    ipv4_gateway    = "10.129.254.1"
+    dns_suffix_list = "redsys.lab"
+    dns_server_list = "10.129.254.6"
+}
+  
   network_interface {
     network_id = "${data.vsphere_network.network.id}"
   }

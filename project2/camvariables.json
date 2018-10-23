@@ -55,6 +55,20 @@
       "immutable_after_create": false
     },
     {
+      "name": "vm_ipv4_address",
+      "label": "Vm Ipv 4 Address",
+      "description": "Virtual machine ipv4 address for virtual_machine",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
       "name": "virtual_machine_number_of_vcpu",
       "label": "Virtual Machine Number Of Vcpu",
       "description": "Number of virtual cpu's.",

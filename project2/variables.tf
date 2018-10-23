@@ -14,6 +14,11 @@ variable "virtual_machine_name" {
   description = "Virtual machine name for virtual_machine"
 }
 
+variable "vm_ipv4_address" {
+  type = "string"
+  description = "Virtual machine ipv4 address for virtual_machine"
+}
+
 variable "virtual_machine_number_of_vcpu" {
   type = "string"
   description = "Number of virtual cpu's."
