@@ -58,7 +58,7 @@ resource "vsphere_virtual_machine" "virtual_machine" {
     template_uuid = "${data.vsphere_virtual_machine.virtual_machine_template.id}"
   }
   disk {
-    name = "${var.virtual_machine_disk_name}.vmdk"
+    label = "${var.virtual_machine_disk_name}"
     size = "${var.virtual_machine_disk_size}"
   }
 }
