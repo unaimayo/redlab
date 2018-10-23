@@ -130,26 +130,6 @@ variable "vm_disk1_datastore" {
   description = "Data store or storage cluster name for target virtual machine's disks"
 }
 
-
-variable "vm_disk2_enable" {
-  type = "string"
-  description = "Enable a Second disk on VM"
-} 
-
-variable "vm_disk2_size" {
-  description = "Size of template disk volume"
-}
-
-variable "vm_disk2_keep_on_remove" {
-  type = "string"
-  description = "Delete template disk volume when the virtual machine is deleted"
-  default = "false"
-}
-
-variable "vm_disk2_datastore" {
-  description = "Data store or storage cluster name for target virtual machine's disks"
-}
-
 variable "vm_clone_timeout" {
   description = "The timeout, in minutes, to wait for the virtual machine clone to complete."
   default = "30"
