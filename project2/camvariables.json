@@ -9,61 +9,23 @@
     },
     {
       "name": "Instances-vsphere_virtual_machine.virtual_machine",
-      "label": "Instances - vsphere_virtual_machine.virtual_machine"
+      "label": "Instance details"
     },
     {
       "name": "Other",
-      "label": "Other"
+      "label": "vSphere"
     },
     {
       "name": "Other-vsphere",
       "label": "Other - vsphere"
+    },
+    {
+      "name": "vsphere_virtual_machine_networks",
+      "label": "vsphere_virtual_machine Networks"
     }
   ],
   "output_groups": [ ],
   "template_input_params": [
-    {
-      "name": "user",
-      "label": "User",
-      "description": "Generated",
-      "type": "string",
-      "default": "",
-      "validation": "",
-      "group_name": "Other-vsphere",
-      "required": true,
-      "secured": false,
-      "hidden": false,
-      "immutable": false,
-      "immutable_after_create": false
-    },
-    {
-      "name": "password",
-      "label": "Password",
-      "description": "Generated",
-      "type": "string",
-      "default": "",
-      "validation": "",
-      "group_name": "Other-vsphere",
-      "required": true,
-      "secured": false,
-      "hidden": false,
-      "immutable": false,
-      "immutable_after_create": false
-    },
-    {
-      "name": "vsphere_server",
-      "label": "Vsphere Server",
-      "description": "Generated",
-      "type": "string",
-      "default": "",
-      "validation": "",
-      "group_name": "Other-vsphere",
-      "required": true,
-      "secured": false,
-      "hidden": false,
-      "immutable": false,
-      "immutable_after_create": false
-    },
     {
       "name": "allow_unverified_ssl",
       "label": "Allow Unverified Ssl",
@@ -74,7 +36,7 @@
       "group_name": "Other-vsphere",
       "required": true,
       "secured": false,
-      "hidden": false,
+      "hidden": true,
       "immutable": false,
       "immutable_after_create": false
     },
@@ -153,7 +115,7 @@
       "label": "Virtual Machine Template Name",
       "description": "Generated",
       "type": "string",
-      "default": "",
+      "default": "PLT-RED-HAT-7",
       "validation": "",
       "group_name": "Instances",
       "required": true,
@@ -167,7 +129,7 @@
       "label": "Virtual Machine Datacenter Name",
       "description": "Generated",
       "type": "string",
-      "default": "",
+      "default": "LABFS",
       "validation": "",
       "group_name": "Other",
       "required": true,
@@ -195,7 +157,7 @@
       "label": "Virtual Machine Datastore Name",
       "description": "Generated",
       "type": "string",
-      "default": "",
+      "default": "datastore1",
       "validation": "",
       "group_name": "Other",
       "required": true,
@@ -205,13 +167,13 @@
       "immutable_after_create": false
     },
     {
-      "name": "resource_pool_cluster_name",
-      "label": "Resource Pool Cluster Name",
-      "description": "Cluster name",
+      "name": "network_network_name",
+      "label": "Network Network Name",
+      "description": "Generated",
       "type": "string",
-      "default": "",
+      "default": "VM Network",
       "validation": "",
-      "group_name": "Other",
+      "group_name": "vsphere_virtual_machine_networks",
       "required": true,
       "secured": false,
       "hidden": false,

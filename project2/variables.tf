@@ -4,21 +4,6 @@
 ##
 #####################################################################
 
-variable "user" {
-  type = "string"
-  description = "Generated"
-}
-
-variable "password" {
-  type = "string"
-  description = "Generated"
-}
-
-variable "vsphere_server" {
-  type = "string"
-  description = "Generated"
-}
-
 variable "allow_unverified_ssl" {
   type = "string"
   description = "Generated"
@@ -74,8 +59,9 @@ variable "virtual_machine_datastore_name" {
   default = "datastore1"
 }
 
-variable "resource_pool_cluster_name" {
+variable "network_network_name" {
   type = "string"
-  description = "Cluster name"
+  description = "Generated"
 }
+
 

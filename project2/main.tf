@@ -4,6 +4,8 @@
 ##
 #####################################################################
 
+## REFERENCE {"vsphere_network":{"type": "vsphere_reference_network"}}
+
 terraform {
   required_version = "> 0.8.0"
 }
@@ -37,9 +39,9 @@ data "vsphere_datastore" "virtual_machine_datastore" {
   datacenter_id = "${data.vsphere_datacenter.virtual_machine_datacenter.id}"
 }
 
-data "vsphere_resource_pool" "resource_pool_cluster" {
-  name          = "${var.resource_pool_cluster_name}"
-  datacenter_id = "${data.vsphere_datacenter.virtual_machine_datacenter_name.id}"
+data "vsphere_network" "network" {
+  name          = "${var.network_network_name}"
+  datacenter_id = "${data.vsphere_datacenter.virtual_machine_datacenter.id}"
 }
 
 resource "vsphere_virtual_machine" "virtual_machine" {
@@ -49,11 +51,14 @@ resource "vsphere_virtual_machine" "virtual_machine" {
   memory        = "${var.virtual_machine_memory}"
   guest_id = "${data.vsphere_virtual_machine.virtual_machine_template.guest_id}"
   resource_pool_id = "${data.vsphere_compute_cluster.virtual_machine_compute_cluster.resource_pool_id}"
+  network_interface {
+    network_id = "${data.vsphere_network.network.id}"
+  }
   clone {
     template_uuid = "${data.vsphere_virtual_machine.virtual_machine_template.id}"
   }
   disk {
-    name = "${var.virtual_machine_disk_name}"
+    name = "${var.virtual_machine_disk_name}.vmdk"
     size = "${var.virtual_machine_disk_size}"
   }
 }
