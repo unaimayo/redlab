@@ -1,0 +1,139 @@
+{
+  "input_datatypes": [
+  {
+    "name": "vCenter",
+    "label": "vCenter Connection"
+  },
+  {
+    "name": "runner",
+    "label": "Host Connection to run scripts"
+  } ],
+  "input_namespaces": [ ],
+  "output_namespace": "",
+  "input_groups": [
+    {
+      "name": "Other-null_resource.add_disk_to_vm",
+      "label": "Other - null_resource.add_disk_to_vm"
+    },
+    {
+      "name": "null_resource_connection",
+      "label": "null_resource Connection"
+    }
+  ],
+  "output_groups": [ ],
+  "template_input_params": [
+    {
+      "name": "vcenter",
+      "label": "Vcenter",
+      "description": "vCenter hostname",
+      "type": "string",
+      "default": "${vCenter.host}",
+      "validation": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "user",
+      "label": "User",
+      "description": "vCenter user",
+      "type": "string",
+      "default": "${vCenter.host}",
+      "validation": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "password",
+      "label": "Password",
+      "description": "vCenter password",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vm_hostname",
+      "label": "Vm Hostname",
+      "description": "vCenter password",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "disk_size",
+      "label": "Disk Size",
+      "description": "vCenter password",
+      "type": "string",
+      "default": "${vCenter.host}",
+      "validation": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "add_disk_to_vm_connection_user",
+      "label": "Add Disk To Vm Connection User",
+      "description": "Add Disk To Vm Connection User",
+      "type": "string",
+      "default": "${runner.user}",
+      "validation": "",
+      "group_name": "null_resource_connection",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "add_disk_to_vm_connection_password",
+      "label": "Add Disk To Vm Connection Password",
+      "description": "Add Disk To Vm Connection Password",
+      "type": "string",
+      "default": "${runner.password}",
+      "validation": "",
+      "group_name": "null_resource_connection",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "add_disk_to_vm_connection_host",
+      "label": "Add Disk To Vm Connection Host",
+      "description": "Add Disk To Vm Connection Host",
+      "type": "string",
+      "default": "${runner.host}",
+      "validation": "",
+      "group_name": "null_resource_connection",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    }
+  ],
+  "template_output_params": [ ]
+}
