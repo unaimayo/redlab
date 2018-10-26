@@ -31,12 +31,17 @@ variable "template_password" {
  
 variable "vm_hostname" {
   type = "string"
-  description = "vCenter password"
+  description = "VM hostname"
+}
+ 
+variable "vm_ipaddress" {
+  type = "string"
+  description = "VM IP address"
 }
 
 variable "disk_size" {
   type = "string"
-  description = "vCenter password"
+  description = "Disk size in GB"
 }
 
 variable "add_disk_to_vm_connection_user" {

@@ -62,6 +62,6 @@ EOT
     type = "ssh"
     user = "${var.template_user}"
     password = "${var.template_password}"
-    host = "${var.add_disk_to_vm_connection_host}"
+    host = "${var.vm_ipaddress}"
   }
 }

@@ -100,7 +100,21 @@
     {
       "name": "vm_hostname",
       "label": "Vm Hostname",
-      "description": "VM hostname or IP address",
+      "description": "VM hostname",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vm_ipaddress",
+      "label": "Vm Ipaddress",
+      "description": "VM IP address",
       "type": "string",
       "default": "",
       "validation": "",
