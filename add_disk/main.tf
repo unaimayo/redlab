@@ -21,7 +21,7 @@ VM=$4
 SIZE=$5
 
 # add disk to vm
-python2.7 ./add_disk_to_vm.py -s $HOST -u $USER -p $PWD -v $VM --disk-size $SIZE
+python2.7 /root/cam/vmware/add_disk_to_vm.py -s $HOST -u $USER -p $PWD -v $VM --disk-size $SIZE
 # get device
 DEV=`lsblk | tail -n1 | cut -f1 -d " "`
 # add to vg
@@ -32,7 +32,7 @@ EOT
   
   provisioner "remote-exec" {
      inline = [
-     	  "chmod +x add_disk_to_vm.sh",
+     	  "chmod +x /tmp/add_disk_to_vm.sh",
         "sudo bash /tmp/add_disk_to_vm.sh ${var.vcenter_host} ${var.vcenter_user} ${var.vcenter_password} ${var.vm_hostname} ${var.disk_size}"
       ]
   }

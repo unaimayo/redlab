@@ -33,7 +33,7 @@
       "group_name": "",
       "required": true,
       "secured": false,
-      "hidden": false,
+      "hidden": true,
       "immutable": false,
       "immutable_after_create": false
     },
@@ -47,7 +47,7 @@
       "group_name": "",
       "required": true,
       "secured": false,
-      "hidden": false,
+      "hidden": true,
       "immutable": false,
       "immutable_after_create": false
     },
@@ -60,8 +60,8 @@
       "validation": "",
       "group_name": "",
       "required": true,
-      "secured": false,
-      "hidden": false,
+      "secured": true,
+      "hidden": true,
       "immutable": false,
       "immutable_after_create": false
     },
@@ -75,7 +75,7 @@
       "group_name": "",
       "required": true,
       "secured": false,
-      "hidden": false,
+      "hidden": true,
       "immutable": false,
       "immutable_after_create": false
     },
@@ -103,7 +103,7 @@
       "group_name": "null_resource_connection",
       "required": true,
       "secured": false,
-      "hidden": false,
+      "hidden": true,
       "immutable": false,
       "immutable_after_create": false
     },
@@ -116,8 +116,8 @@
       "validation": "",
       "group_name": "null_resource_connection",
       "required": true,
-      "secured": false,
-      "hidden": false,
+      "secured": true,
+      "hidden": true,
       "immutable": false,
       "immutable_after_create": false
     },
@@ -131,7 +131,7 @@
       "group_name": "null_resource_connection",
       "required": true,
       "secured": false,
-      "hidden": false,
+      "hidden": true,
       "immutable": false,
       "immutable_after_create": false
     }
