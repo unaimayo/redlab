@@ -25,10 +25,6 @@ data "vsphere_datacenter" "virtual_machine_datacenter" {
   name = "${var.virtual_machine_datacenter_name}"
 }
 
-data "vsphere_datacenter" "virtual_machine_datacenter_name" {
-  name = "${var.virtual_machine_datacenter_name}"
-}
-
 data "vsphere_compute_cluster" "virtual_machine_compute_cluster" {
   name          = "${var.virtual_machine_compute_cluster_name}"
   datacenter_id = "${data.vsphere_datacenter.virtual_machine_datacenter.id}"
