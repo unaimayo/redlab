@@ -40,6 +40,8 @@ EOT
 }
 
 resource "null_resource" "add_disk_to_vg" {
+  depends_on = ["null_resource.add_disk_to_vm"]
+
   provisioner "file" {
     destination = "/tmp/add_disk_to_vg.sh"
     content     = <<EOT
