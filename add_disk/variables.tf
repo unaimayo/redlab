@@ -19,6 +19,16 @@ variable "vcenter_password" {
   description = "vCenter password"
 }
  
+variable "template_user" {
+  type = "string"
+  description = "VMware template user"
+}
+ 
+variable "template_password" {
+  type = "string"
+  description = "VMware template password"
+}
+ 
 variable "vm_hostname" {
   type = "string"
   description = "vCenter password"

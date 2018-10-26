@@ -7,6 +7,10 @@
     {
       "name": "runner",
       "label": "Host Connection to run scripts"
+    },
+    {
+      "name": "template",
+      "label": "VMware template credentials"
     }
   ],
   "input_namespaces": [ ],
@@ -57,6 +61,34 @@
       "description": "vCenter password",
       "type": "string",
       "default": "${vCenter.password}",
+      "validation": "",
+      "group_name": "",
+      "required": true,
+      "secured": true,
+      "hidden": true,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "template_user",
+      "label": "Template User",
+      "description": "VMware template user",
+      "type": "string",
+      "default": "${template.user}",
+      "validation": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": true,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "template_password",
+      "label": "Template Password",
+      "description": "VMware template password",
+      "type": "string",
+      "default": "${template.password}",
       "validation": "",
       "group_name": "",
       "required": true,

@@ -22,11 +22,6 @@ SIZE=$5
 
 # add disk to vm
 python2.7 /root/cam/vmware/add_disk_to_vm.py -s $HOST -u $USER -p $PWD -v $VM --disk-size $SIZE
-# get device
-DEV=`lsblk | tail -n1 | cut -f1 -d " "`
-# add to vg
-pvcreate $DEV
-vgextend vg_root $DEV
 EOT
 }
   
@@ -40,6 +35,33 @@ EOT
     type = "ssh"
     user = "${var.add_disk_to_vm_connection_user}"
     password = "${var.add_disk_to_vm_connection_password}"
+    host = "${var.add_disk_to_vm_connection_host}"
+  }
+}
+
+resource "null_resource" "add_disk_to_vg" {
+  provisioner "file" {
+    destination = "/tmp/add_disk_to_vg.sh"
+    content     = <<EOT
+#!/bin/bash
+# get device
+DEV=`lsblk | tail -n1 | cut -f1 -d " "`
+# add to vg
+pvcreate $DEV
+vgextend vg_root $DEV
+EOT
+}
+  
+  provisioner "remote-exec" {
+     inline = [
+     	  "chmod +x /tmp/add_disk_to_vg.sh",
+        "sudo bash /tmp/add_disk_to_vg.sh"
+      ]
+  }
+  connection {
+    type = "ssh"
+    user = "${var.template_user}"
+    password = "${var.template_password}"
     host = "${var.add_disk_to_vm_connection_host}"
   }
 }
