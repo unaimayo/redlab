@@ -1,14 +1,14 @@
 {
-   "name": "project2",
-   "description": "Description for project2.",
+   "name": "provision_vm",
+   "description": "This template provision an instance in a vCenter datatstore and selected network.",
    "type": "userCreated",
    "manifest": {
      "template_type": "Terraform",
      "template_format": "HCL",
-     "template_provider": "Other"
+     "template_provider": "VMware vSphere"
    },
    "metadata": {
-     "displayName": "project2",
+     "displayName": "Provision VM",
      "bullets": []
    }
  }
