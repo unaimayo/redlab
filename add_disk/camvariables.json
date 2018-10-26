@@ -75,7 +75,7 @@
       "group_name": "",
       "required": true,
       "secured": false,
-      "hidden": true,
+      "hidden": false,
       "immutable": false,
       "immutable_after_create": false
     },
