@@ -4,17 +4,17 @@
 ##
 #####################################################################
 
-variable "vcenter" {
+variable "vcenter_host" {
   type = "string"
   description = "vCenter hostname"
 }
  
-variable "user" {
+variable "vcenter_user" {
   type = "string"
   description = "vCenter user"
 }
  
-variable "password" {
+variable "vcenter_password" {
   type = "string"
   description = "vCenter password"
 }

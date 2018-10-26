@@ -33,7 +33,7 @@ EOT
   provisioner "remote-exec" {
      inline = [
      	  "chmod +x add_disk_to_vm.sh",
-        "sudo bash /tmp/add_disk_to_vm.sh ${var.vcenter} ${var.user} ${var.password} ${var.vm_hostname} ${var.disk_size}"
+        "sudo bash /tmp/add_disk_to_vm.sh ${var.vcenter_host} ${var.vcenter_user} ${var.vcenter_password} ${var.vm_hostname} ${var.disk_size}"
       ]
   }
   connection {

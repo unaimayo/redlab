@@ -1,13 +1,14 @@
 {
   "input_datatypes": [
-  {
-    "name": "vCenter",
-    "label": "vCenter Connection"
-  },
-  {
-    "name": "runner",
-    "label": "Host Connection to run scripts"
-  } ],
+    {
+      "name": "vCenter",
+      "label": "vCenter Connection"
+    },
+    {
+      "name": "runner",
+      "label": "Host Connection to run scripts"
+    }
+  ],
   "input_namespaces": [ ],
   "output_namespace": "",
   "input_groups": [
@@ -23,8 +24,8 @@
   "output_groups": [ ],
   "template_input_params": [
     {
-      "name": "vcenter",
-      "label": "Vcenter",
+      "name": "vcenter_host",
+      "label": "Vcenter Host",
       "description": "vCenter hostname",
       "type": "string",
       "default": "${vCenter.host}",
@@ -37,11 +38,11 @@
       "immutable_after_create": false
     },
     {
-      "name": "user",
-      "label": "User",
+      "name": "vcenter_user",
+      "label": "Vcenter User",
       "description": "vCenter user",
       "type": "string",
-      "default": "${vCenter.host}",
+      "default": "${vCenter.user}",
       "validation": "",
       "group_name": "",
       "required": true,
@@ -51,11 +52,11 @@
       "immutable_after_create": false
     },
     {
-      "name": "password",
-      "label": "Password",
+      "name": "vcenter_password",
+      "label": "Vcenter Password",
       "description": "vCenter password",
       "type": "string",
-      "default": "",
+      "default": "${vCenter.password}",
       "validation": "",
       "group_name": "",
       "required": true,
@@ -67,7 +68,7 @@
     {
       "name": "vm_hostname",
       "label": "Vm Hostname",
-      "description": "vCenter password",
+      "description": "VM hostname or IP address",
       "type": "string",
       "default": "",
       "validation": "",
@@ -81,9 +82,9 @@
     {
       "name": "disk_size",
       "label": "Disk Size",
-      "description": "vCenter password",
+      "description": "Disk size in GB",
       "type": "string",
-      "default": "${vCenter.host}",
+      "default": "",
       "validation": "",
       "group_name": "",
       "required": true,

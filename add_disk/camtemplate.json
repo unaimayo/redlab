@@ -1,6 +1,6 @@
 {
    "name": "add_disk",
-   "description": "Description for add_disk.",
+   "description": "Add new disk to VM and include in existing volume group.",
    "type": "userCreated",
    "manifest": {
      "template_type": "Terraform",
@@ -8,7 +8,7 @@
      "template_provider": "Other"
    },
    "metadata": {
-     "displayName": "add_disk",
+     "displayName": "Add new disk to VM",
      "bullets": []
    }
  }
