@@ -48,6 +48,7 @@ resource "null_resource" "add_disk_to_vg" {
 #!/bin/bash
 # get device
 DEV=`lsblk | tail -n1 | cut -f1 -d " "`
+DEV=/dev/$DEV
 # add to vg
 pvcreate $DEV
 vgextend vg_root $DEV
